@@ -39,23 +39,23 @@ while (terminarOperacion == false) {
 //5.-dependiendo de la opcion seleccionada es la operacion que va a realizar
     switch (consultaOpcion) {
       case 1:
-        verTablamultiplicar();
+        verTablamultiplicar()
         break;
       case 2:
-        ingresarNumeros();
-        alert(`La suma de ${num1} + ${num2} = ` + (num1 + num2));
+        ingresarNumeros()
+        alert(sumar())
         break;
       case 3:
-        ingresarNumeros();
-        alert(`La resta de ${num1} - ${num2} = ` + (num1 - num2));
+        ingresarNumeros()
+        alert(resta())
         break;
       case 4:
-        ingresarNumeros();
-        alert(`La multiplicacion de ${num1} * ${num2} = ` + num1 * num2);
+        ingresarNumeros()
+        alert(multiplicaion())
         break;
       case 5:
-        ingresarNumeros();
-        alert(`La division de ${num1} / ${num2} = ` + num1 / num2);
+        ingresarNumeros()
+        alert(division())
         break;
       case 6:
 //6.-si se selecciona 6 - salir
@@ -123,6 +123,18 @@ while (terminarOperacion == false) {
         validacion = true;
       }
     }
+  }
+  function sumar(){
+    return `La suma de ${num1} + ${num2} = ` + (num1 + num2)
+  }
+  function resta(){
+    return `La resta de ${num1} - ${num2} = ` + (num1 - num2)
+  }
+  function multiplicaion(){
+    return `La multiplicacion de ${num1} * ${num2} = ` + num1 * num2
+  }
+  function division(){
+    return `La division de ${num1} / ${num2} = ` + num1 / num2
   }
 }
 //8.-mostrar mensaje de despedida + nombre
