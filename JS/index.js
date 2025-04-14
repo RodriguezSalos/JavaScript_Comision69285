@@ -116,9 +116,6 @@ document.getElementById("btnReset").addEventListener("click", () => {
   inputNombre.value = "";
   resultado.textContent = "";
   saludo.textContent = "";
-  localStorage.removeItem("nombreUsuario");
-  localStorage.removeItem("operaciones");
-
 });
 // Buscar operacion
 document.getElementById("btnBuscar").addEventListener("click", () => {
