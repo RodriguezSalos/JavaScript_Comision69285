@@ -1,0 +1,13 @@
+
+  h1, h2 {
+    text-align: center;
+  }      
+  #resultado {
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+  }
+  #btnReset{
+    display: block;
+    margin-right: auto;
+  }
