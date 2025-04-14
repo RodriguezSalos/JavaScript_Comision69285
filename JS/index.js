@@ -5,7 +5,6 @@
 4.- se muestra resultado
 
 */
-// Elementos del DOM
 const n1 = document.getElementById("numero1");
 const n2 = document.getElementById("numero2");
 const resultado = document.getElementById("resultado");
@@ -13,11 +12,18 @@ const inputNombre = document.getElementById("nombreUsuario");
 const btnGuardarNombre = document.getElementById("guardarNombre");
 const saludo = document.getElementById("saludo-usuario");
 
-// Cargar nombre guardado (si existe)
+// Cargar nombre guardado
 const nombreGuardado = localStorage.getItem("nombreUsuario");
 if (nombreGuardado) {
   mostrarSaludo(nombreGuardado);
 }
+// Cargar operaciones guardadas
+const operacionesGuardadas = JSON.parse(localStorage.getItem("operaciones"));
+if (operacionesGuardadas) {
+  operaciones = operacionesGuardadas;
+  renderOperaciones();
+}
+
 
 // Guardar nombre nuevo
 btnGuardarNombre.addEventListener("click", () => {
@@ -76,6 +82,8 @@ function operar(tipo) {
   };
 
   operaciones.push(operacionObj);
+  localStorage.setItem("operaciones", JSON.stringify(operaciones));
+
 
   resultado.textContent = `${num1} ${simbolo(tipo)} ${num2} = ${res}`;
   renderOperaciones();
@@ -108,8 +116,11 @@ document.getElementById("btnReset").addEventListener("click", () => {
   inputNombre.value = "";
   resultado.textContent = "";
   saludo.textContent = "";
+  localStorage.removeItem("nombreUsuario");
+  localStorage.removeItem("operaciones");
+
 });
-// Buscar operacionpor resultado usando find()
+// Buscar operacion
 document.getElementById("btnBuscar").addEventListener("click", () => {
   const valorBuscado = parseFloat(document.getElementById("buscarResultado").value);
   const resultadoBusqueda = document.getElementById("resultadoBusqueda");
