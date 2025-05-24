@@ -1,78 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta author="Salome Rodriguez" />
     <meta email="rodriguez.salos@gmail.com" />
     <meta codehouse_comision="69285" />
-    <link rel="stylesheet" href="CSS/style.css" />
-    <title>📝Tu Lista de tareas</title>
+    <title>📝 Tu Lista de Tareas</title>
+    <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <!-- CDN de aniamte.css-->
+    <!-- CDN Animate.css -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <!-- CDN de Toastify-->
+    <!-- CDN Toastify -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
     />
+    <link rel="stylesheet" href="CSS/style.css" />
   </head>
-  <body class="bg-trasparent text-white">
+  
+  <body class="bg-trasparent text-blue">
     <div class="container my-5">
-      <h1 class="text-center mb-4 animate__animated animate__fadeInDown">
-        Administrador de Tareas
-      </h1>
-
-      <!-- Formularios para las tareas -->
+      <div class="d-flex justify-content-center">
+        <h1 class="mb-4 animate__animated animate__fadeInDown fondo-blanco-titulo">Administrador de Tareas</h1>
+      </div>
+      <!-- FORMULARIO -->
       <form id="taskForm" class="mb-4">
         <div class="row g-2">
+          <!-- Nombre de la tarea -->
           <div class="col-md-4">
-            <!-- usando 'required' para campos que se tiene que seleccionar
-             required funcion nativa de html-->
             <input
               type="text"
               id="taskName"
               class="form-control"
-              placeholder="Introduce el nombre de la tarea"
+              placeholder="Nombre de la tarea"
               required
             />
           </div>
 
+          <!-- tomando prioridades desde json file -->
+          <div class="col-md-2">
+            <select id="taskPriority" class="form-select" required>
+              <option value="" disabled selected>Prioridad</option>
+            </select>
+          </div>
+
+          <!-- tomando categoritas desde json file-->
           <div class="col-md-3">
-            <select id="prioridad" class="form-select" required>
-              <option value="" disabled selected>
-                Seleccione la Prioridad
-              </option>
-              <!--Aqui se va tomar las prioridades desde la carpeta db>prioridad -->
+            <select id="taskCategory" class="form-select" required>
+              <option value="" disabled selected>Categoría</option>
             </select>
           </div>
 
-          <div class="col-md-4">
-            <select id="categoria" class="form-select" required>
-              <option value="" disabled selected>Categoria</option>
-              <!--Aqui se va tomar las prioridades desde la carpeta db>prioridad -->
-            </select>
-          </div>
-
+          <!-- bton agregar -->
           <div class="col-md-3">
             <button type="submit" class="btn btn-primary w-100">Agregar</button>
           </div>
         </div>
       </form>
 
-      <!-- Lista de las tareas -->
-      <ul id="taskList" class="list-group"></ul>
-
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-      <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-
-      <script src="js/dom.js"></script>
+      <!-- lista de tareas -->
+      <ul id="taskList" class="list-group">
+        <!-- Las tareas se insertan desde dom.js -->
+      </ul>
     </div>
+
+    <!-- librerias js sweetalert & toastify -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <!-- logia js -->
+    <script src="js/taskController.js"></script>
+    <script src="js/dom.js"></script>
   </body>
 </html>
