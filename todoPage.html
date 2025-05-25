@@ -24,8 +24,8 @@
     />
     <link rel="stylesheet" href="CSS/style.css" />
   </head>
-  
-  <body class="bg-trasparent text-blue">
+
+</div>
     <div class="container my-5">
       <div class="d-flex justify-content-center">
         <h1 class="mb-4 animate__animated animate__fadeInDown fondo-blanco-titulo">Administrador de Tareas</h1>
@@ -71,6 +71,12 @@
       </ul>
     </div>
 
+<!-- Botón de chiste del día -->
+<button id="btnChiste" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;" class="btn btn-primary">
+  Consultar chiste del día
+</button>
+<p id="chisteDia" style="position: fixed; bottom: 70px; right: 20px; width: 300px; font-weight: bold;"></p>
+
     <!-- librerias js sweetalert & toastify -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
@@ -78,5 +84,6 @@
     <!-- logia js -->
     <script src="js/taskController.js"></script>
     <script src="js/dom.js"></script>
+    <script src="js/chiste.js"></script>
   </body>
 </html>
