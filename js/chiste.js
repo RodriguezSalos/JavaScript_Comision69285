@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = await res.json();
         const joke = `${data.setup} — ${data.punchline}`;
         pChiste.textContent = "😜"+ joke + "🤡";
-        pChiste.style.color = 'yellow';
 
         // Agrega clases de animación
         pChiste.classList.remove('animate__fadeInUp'); // Reinicia animación
