@@ -1,21 +1,3 @@
-      body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-
-      background-image: url('assets/office-background_1.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-
-      filter: brightness(0.7);
-      z-index: -1;
-    }
-
     .fondo-blanco-titulo {
       background-color: rgba(255, 255, 255, 0.8);
       /* Blanco con 80% de opacidad */
