@@ -1,0 +1,5 @@
+[
+  { "id": 1, "nivel": "alta" },
+  { "id": 2, "nivel": "media" },
+  { "id": 3, "nivel": "baja" }
+]

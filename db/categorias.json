@@ -1,0 +1,6 @@
+[
+  { "id": 1, "nombre": "Personal" },
+  { "id": 2, "nombre": "Trabajo" },
+  { "id": 3, "nombre": "Estudios" },
+  { "id": 4, "nombre": "Compras" }
+]

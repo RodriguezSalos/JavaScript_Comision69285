@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta author="Salome Rodriguez" />
+    <meta codehouse_comision="69285" />
+    <script src="JS/index.js" defer></script>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <title>Entrega 2</title>
+  </head>
+  <body>
+    <h1>Simulador de Operaciones Matemáticas</h1>
+
+    <section id="nombre-section">
+      <h2>👋 Bienvenido</h2>
+      <div id="saludo-usuario"></div>
+      <input type="text" id="nombreUsuario" placeholder="Ingresa tu nombre" />
+      <button id="guardarNombre">Guardar Nombre</button>
+    </section>
+
+    <section id="input-section">
+      <input type="number" id="numero1" placeholder="Primer número" />
+      <input type="number" id="numero2" placeholder="Segundo número" />
+      <button id="btnSumar">Sumar</button>
+      <button id="btnRestar">Restar</button>
+      <button id="btnMultiplicar">Multiplicar</button>
+      <button id="btnDividir">Dividir</button>
+    </section>
+
+    <section>
+      <h2>Resultado:</h2>
+      <div id="resultado"></div>
+
+      <!-- NUEVO: Lista de operaciones realizadas -->
+      <h3>Operaciones realizadas:</h3>
+      <ul id="listaOperaciones"></ul>
+    </section>
+
+    <h3>Buscar resultado exacto en operaciones realizadas:</h3>
+    <input type="number"
+      id="buscarResultado"
+      placeholder="Resultado a buscar"
+    />
+    <button id="btnBuscar">Buscar</button>
+    <p id="resultadoBusqueda"></p>
+
+    <button id="btnReset">Resetear</button>
+  </body>
+</html>
